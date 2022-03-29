@@ -1,0 +1,41 @@
+[Botnet Setup By Merlyn]
+
+So you've Bought a VPS and decided to setup a botnet, here's what you need to do.
+
+Download the dependencies what you need for the botnet to work.
+
+[Dependencies Commands]
+yum install python python-paramiko screen gcc nano perl perl-CPAN wget
+yum groupinstall "Development tools"
+
+Alright now that all those dependencies are installed change the ip in the source
+usually there is only one ip in the client.c/bot.c but sometimes you'll fine one in the cnc/c2
+thats for selling builds with that source so change both if you have one in the cnc/c2 also.
+
+[IPS Change in Client/bot]
+    xxx.xxx.xxx.xxx
+
+Sick you changed the ip and now are ready to compile your client/c2 to get you bins.
+
+[Compile Command]
+python compile.py client.c/bot.c
+
+Now compilers are all different names just change the client and compile name to the ones you have
+in your source, also if you dont no what bins are they are what u use to connect the bots to your botnet
+you can find them to see if they have been made in [Enter Command] cd /var/www/html then type ls and enter.
+
+Alright time to compile the cnc
+
+[CNC Compile Command]
+gcc cnc.c -o c2 -pthread
+
+Ok the cnc had now been compiled time to go into the login and add users.
+
+[Add logins Command]
+nano logins.txt
+
+that command creates a login txt in the cd that u typed it in now just add you user and password.
+now that we got all that over screen your botnet with this command.
+
+[Screen Command]
+screen ./server [BotPort] 100 [CncPort]

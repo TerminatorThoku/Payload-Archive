@@ -1,0 +1,5 @@
+|Allows you to see incomming connections to the botnet, these don't mean they will join
+|just shows you what devices have downloaded and run the bins.
+|
+|->[Tailf Logs]
+tailf /etc/httpd/logs/access_log
