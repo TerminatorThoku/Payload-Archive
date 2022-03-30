@@ -1,0 +1,25 @@
+With this script you can gather ranges from ISP / Hosts very quickly and with ease... all you need is an ASN.
+HOW TO RUN: 
+1. First, get the ASN of the ISP / Server host you want to get the ranges of. 
+
+Here is a list of ASN Numbers by ISP and Host: https://ipinfo.io/countries
+
+2. Now, run the file in your VPS: ./scraper AS<NUMBER> 
+Example: ./scraper AS30036
+^ That is one of Mediacoms ASN numbers
+
+Once ran this will put all of that ISP/Hosts ranges into the ranges.lst file. 
+Keep in mind, the rangles will keep writing into the same document (ranges.lst), so you will need to clear this to make new lists etc. (You can always change the name to make new lists).
+
+HOW TO SCRAPE MULTIPLE ASNS (At the same time):
+1. Put each ASN number on a different line in the ASNS.txt 
+2. have all of these files in the vps
+3. run: python add.py ASNS.txt
+4. this will run all of the ASNS in the ASNS.txt and will add the ranges into the ranges.lst
+
+
+
+TIPS ON CREATING LISTS:
+- Stay away from USA, Canada, UK... unless the exploit your scanning is popular there. You will hit really nothing but honeypots while scanning.
+- Asia and South American countries are best for the results, but that is also dependant on exploit.
+- What I usally do is just take all the ASN numbers from one country (get the ranges into the ranges.lst) and scan them at once. 
