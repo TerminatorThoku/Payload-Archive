@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://i.imgur.com/j5N7HeH.gif"><p>
     <p align="center">
+      for mpre releases go to t.me/konets
 BOTNET Archive Releases Such As [ Scanners | Botnets | Exploits | Methods]
 <p>
   <p align="center">
